@@ -6,6 +6,8 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.example.navigationdrawer.databinding.ActivityMainBinding;
 
@@ -29,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
         binding.drawer.addDrawerListener(toggle);
 
         toggle.syncState();
+
+        View baslik=binding.navigationView.inflateHeaderView(R.layout.nav_baslik);
+        TextView textViewBaslik=baslik.findViewById(R.id.textViewBaslik);
+        textViewBaslik.setText("Samet Uyanık");
 
     }
 }
